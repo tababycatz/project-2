@@ -2,14 +2,15 @@ $(document).ready(function(){
   
     //initialize the firebase app
     var conf = {
-      apiKey: "AIzaSyA27T5BtrS0Q4xC1QL-HlfDG4-HekbgLFg",
-       authDomain: "login-d55e2.firebaseapp.com",
-      databaseURL: "https://login-d55e2.firebaseio.com",
-      projectId: "login-d55e2",
-      storageBucket: "login-d55e2.appspot.com",
-      messagingSenderId: "1029851881657",
-      appId: "1:1029851881657:web:abac5cb4c80c4664"
-    };
+    apiKey: "AIzaSyAOvAf-w9eEYGMis3TVTX4MJ89Dsln_Xxc",
+    authDomain: "bigmart-297c1.firebaseapp.com",
+    databaseURL: "https://bigmart-297c1.firebaseio.com",
+    projectId: "bigmart-297c1",
+    storageBucket: "bigmart-297c1.appspot.com",
+    messagingSenderId: "1065535951021",
+    appId: "1:1065535951021:web:6031dc177733280f04b624",
+    measurementId: "G-62Q92VEQEH"
+  };
     
     firebase.initializeApp(conf);
   
