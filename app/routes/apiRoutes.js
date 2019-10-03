@@ -1,24 +1,40 @@
-var db = require("../models");
+var path = require("path");
+var array = require("../data/");
+
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
+    app.get("/api/friends", function (req, res) {
+        res.json(friendsData);
+    })
 
-  // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+    app.post("/api/friends", function(req, res){
+        
+        var friendMatch = {
+            matchName: "",
+            matchPic: "",
+            totalDifference: 1000
 
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
+        }
+        
+        var newFriend = req.body;
+        var friendAnswer = newFriend.scores;
+        var friendDifference = 0;
+
+        for (let i = 0; i < friendsData.length; i++) {
+            friendDifference = 0;
+            for (let j = 0; j < friendAnswer.length; j++) {
+                friendDifference += Math.abs(parseInt(newFriend[i].scores[j]) - parseInt(friendAnswer[j]));
+            }
+            if (friendDifference <= friendMatch.totalDifference) {
+                totalDifference = diff;
+                friendMatch.matchName = friendsData[i].name;
+                friendMatch.matchPic = friendsData[i].photo;
+                friendMatch.totalDifference = friendDifference;
+            }
+        };
+
+        friendsData.push(newFriend);
+        res.json({friendMatch});
+    })
+    // console.log(req.body);
 };
