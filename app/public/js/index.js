@@ -1,3 +1,10 @@
+var index = require("../models/model.js");
+
+console.log(index);
+
+
+
+
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
