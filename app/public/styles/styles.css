@@ -1,6 +1,6 @@
 
   
-  body, html {
+ body, html {
       height: 100%;
       font-family: Poppins-Regular, sans-serif;
   }
@@ -218,4 +218,6 @@
   }
 
 
-
+  .fas fa-shopping-cart {
+    color: white;
+  }
