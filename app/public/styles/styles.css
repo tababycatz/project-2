@@ -1,15 +1,19 @@
 
-  * {
-      margin: 0px; 
-      padding: 0px; 
-      box-sizing: border-box;
-  }
   
   body, html {
       height: 100%;
       font-family: Poppins-Regular, sans-serif;
   }
   
+.page1 {
+
+  background: #232323;
+
+}
+
+
+
+
  /* remove outline for input area of text in email & pw fields */
   input {
       outline: none;
@@ -39,20 +43,7 @@
   }
   
   
-  .login-container {
-    width: 100%;  
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background: #f2f2f2;
-  }
-  
+
   
   .wrap-login {
     width: 100%;
@@ -175,48 +166,56 @@
     background: #333333;
   }
   
+/* category pages */
+  body {
+    background:gray;
+    background: -webkit-linear-gradient(to right, #00b09b, #96c93d);
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    min-height: 100vh;
+  }
+  
+  .text-gray {
+    color: #aaa;
+  }
 
-  .myButton {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf));
-	background:-moz-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
-	background:-webkit-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
-	background:-o-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
-	background:-ms-linear-gradient(top, #ededed 5%, #dfdfdf 100%);
-	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf',GradientType=0);
-	background-color:#ededed;
-	-moz-border-radius:6px;
-	-webkit-border-radius:6px;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#777777;
-	font-family:Verdana;
-	font-size:14px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-    text-shadow:0px 1px 0px #ffffff;
-    margin-top: 500px;
-}
-.myButton:hover {
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed));
-	background:-moz-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
-	background:-webkit-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
-	background:-o-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
-	background:-ms-linear-gradient(top, #dfdfdf 5%, #ededed 100%);
-	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed',GradientType=0);
-	background-color:#dfdfdf;
-}
-.myButton:active {
-	position:relative;
-	top:1px;
-}
+/* add to cart buttons */
+
+  
+  .add-to-cart-button {
+    -moz-box-shadow:inset 0px -1px 0px 0px #bee2f9;
+    -webkit-box-shadow:inset 0px -1px 0px 0px #bee2f9;
+    box-shadow:inset 0px -1px 0px 0px #bee2f9;
+    background-color:transparent;
+    -webkit-border-top-left-radius:0px;
+    -moz-border-radius-topleft:0px;
+    border-top-left-radius:0px;
+    -webkit-border-top-right-radius:0px;
+    -moz-border-radius-topright:0px;
+    border-top-right-radius:0px;
+    -webkit-border-bottom-right-radius:0px;
+    -moz-border-radius-bottomright:0px;
+    border-bottom-right-radius:0px;
+    -webkit-border-bottom-left-radius:0px;
+    -moz-border-radius-bottomleft:0px;
+    border-bottom-left-radius:0px;
+  text-indent:0px;
+    border:1px solid #3866a3;
+    display:inline-block;
+    color:#14396a;
+    font-family:Arial Black;
+    font-size:14px;
+    font-weight:bold;
+    font-style:normal;
+  height:65px;
+    line-height:65px;
+  width:131px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:1px 1px 50px #7cacde;
+  }.add-to-cart-button:active {
+    position:relative;
+    top:1px;
+  }
 
 
 
