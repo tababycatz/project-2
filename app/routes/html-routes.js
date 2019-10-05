@@ -37,9 +37,34 @@ module.exports = function (app) {
         res.sendFile(path.join(__dirname, "../public/home.html"));
     });
 
-    app.get("/survey", function (req, res) {
-        res.sendFile(path.join(__dirname, "../public/survey.html"));
+    app.get("/categories", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/categories.html"));
     });
+    
+    app.get("/food", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/catone.html"));
+    });
+
+    app.get("/treats", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/cattwo.html"));
+    });
+
+    app.get("/clothing", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/catthree.html"));
+    });
+
+    app.get("/accessories", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/catfour.html"));
+    });
+
+    app.get("/toys", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/catfive.html"));
+    });
+
+    app.get("/checkout", function (req, res) {
+        res.sendFile(path.join(__dirname, "../public/checkout.html"));
+    });
+
 
 }
 
