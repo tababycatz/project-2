@@ -1,0 +1,31 @@
+Item_ID,ITEM_Name,Item_Description,category ,price ,STOCK_QUANTITY,images
+DT01,Puppy Bites,"YUMMY CHUMMIES GRAIN FREE WILD ALASKA DOG TREATS. 
+ Made with Wild alaska salmon with tender sweet potatoes", TREATS,25.39,20,
+DT02,Milk-Bone,Soft & Chewy Dog Snacks, TREATS,14.29,20,
+DT03,smart bones,"Treats crafted using indiana farm-raised duck meat 
+as the primary source of protein", TREATS,7.99,20,
+DT04,bully sticks,packed with natural beef muscles that are slow roasted for maximum flavor with Redbarn Naturals, TREATS,9.99,20,
+DT05,Purina,"JERKY NATURALS GRAIN-FREE JERKY BITES
+ A healthy alternative to dry, dog biscuits", TREATS,6.89,20,
+DF01,FRESH MIX CANNED ,Designed to support healthy skin and coat with omega 6 & 3,FOOD,2.59,20,
+DF02,cesar can,Premium grain-free dog food made from high quality ocean fish,FOOD,2.79,20,
+DF03,RAW NATURALS,Provides complete and balanced nutrition for all breeds and life stages,FOOD,31.29,20,
+DF04,SPORTSMAN S PRIDE ,Enhanced energy levels for strength and stamina formulated with higher levels of vitamins,FOOD,27.29,20,
+DF05,core,Contains a blend of protein sources to ensure optimal protein nutrition,FOOD,41.19,20,
+TY01,HOOF ,"DURA CHEW HOOF ALTERNATIVE DOG CHEW. 
+",Toys,10.99,20,
+TY02,KONG Teddy ,KONG Teddy Bear Dog Toy,Toys,12.09,20,
+TY03,PUPPY CHEW,"PUPPY CHEW TWIN PACK. 
+Cleaner, safer alternative to real bones",Toys,6.49,20,
+TY04,Dentachew,"Mini Dentachew Pack Dog Toy, ",Toys,9.99,20,
+TY05,Nerf,Nerf Nylon Foam Megaton Disc for Dogs,Toys,12.99,20,
+DA01,THERMAL BOWL,"Stainless steel construction will not harbor bacteria, does not stain, and will not absorb smells.",Accessories,51.29,20,
+DA02,COLLAR KERCHIEF,Styled after a traditional bandana with the added benefits of the collar cover in that it can t come off,Accessories,9.29,20,
+DA03, LEASH, leash makes sure you and your dog stand out at extended distances.,Accessories,19.99,20,
+DA04,DOG COLLAR, leash makes sure you and your dog stand out at extended distances.,Accessories,9.59,20,
+DA05,Kennel,ASPENPET TRADITIONAL PLASTIC KENNEL,Accessories,59.29,20,
+DC01,socks,"Bond & CoDuchess Dog Socks, Small",Clothing,9.99,20,
+DC02,Jacket,Castle Garden Dog Jacket,Clothing,21.99,20,
+DC03,Harnes,"Little Pup Blue Dog Harness, ",Clothing,14.99,20,
+DC04,T-Shirt,Big Papaw Dog T-Shirt,Clothing,9.99,20,
+DC05,Hoodie,Cozy Critter Dog Hoodie,Clothing,17.99,20,
