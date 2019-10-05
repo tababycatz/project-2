@@ -16,6 +16,7 @@ CREATE TABLE products (
   PRIMARY KEY (id)
 );
 
+
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE,STOCK_QUANTITY,IMAGE_NAME)
 VALUES("DA01", "YUMMY CHUMMIES","Wild alaska salmon with tender sweet potatoes exclusively from alaska","DOG TREATS", 2.99, 20, " " );
 
