@@ -1,69 +1,21 @@
-// require("dotenv").config();
-// var express = require("express");
-
-// var db = require("./models");
-
-// var app = express();
-// var PORT = process.env.PORT || 8080;
-
-// // Middleware
-// app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
-// app.use(express.static("public"));
-
-
-// // Routes
-// require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
-
-// var syncOptions = { force: false };
-
-// // If running a test, set syncOptions.force to true
-// // clearing the `testdb`
-// if (process.env.NODE_ENV === "test") {
-//   syncOptions.force = true;
-// }
-
-// // Starting the server, syncing our models ------------------------------------/
-// db.sequelize.sync(syncOptions).then(function() {
-//   app.listen(PORT, function () {
-//     console.log("App listening on PORT " + PORT);
-// });
-// });
-
-// module.exports = app;
-
 var express = require("express");
+var bodyParser = require("body-parser");
+var session = require("express-session");
+var passport = require("./config/passport");
 
 var PORT = process.env.PORT || 8080;
 
-var app = express();
-
-// Serve static content for the app from the "public" directory in the application directory.
+var app = express()
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 app.use(express.static("public"));
+app.use(session({ secret: "keyboard cat" , resave: true, saveUninitialized}))
+app.use(passport.initialize())
+app.use(passport.session())
 
-// Routes
-// require("./routes/apiRoutes")(app);
-// require("./routes/htmlRoutes")(app);
-// Parse application body as JSON
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+require("./routes/api-routes")(app);
+require("./routes/html-routes")(app);
 
-// Set Handlebars.
-// var exphbs = require("express-handlebars");
-
-// app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-// app.set("view engine", "handlebars");
-
-// Import routes and give the server access to them.
-// var routes = require("./controllers/catsController.js");
-
-
-app.use(routes);
-
-// Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log("Server listening on: http://localhost:" + PORT);
-});
-module.exports = app;
+app.listen(PORT, function(){
+    console.log("Listening on port %s. visit http//localhost:%s/")
+})
