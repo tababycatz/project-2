@@ -26,11 +26,11 @@ connection.connect(function (err) {
 })
 
 var connection2 = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "       ",
-    databse: "pawesome_db"
+    "host2": process.env.host2,
+    "port2": 3306,
+    "user2": process.env.USER2,
+    "password2": process.env.PASSWORD2,
+    "databse2": process.env.DATABASE2
 })
 
 

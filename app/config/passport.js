@@ -1,6 +1,5 @@
 var passport = require("passport");
 var localStrategy = require("passport-local").Strategy;
-
 var bcrypt = require("bcrypt-node.js");
 var model = require("../models/users")
 
@@ -18,17 +17,13 @@ passport.use(
             if(!rows.length) {
                 return done (null, false, {message: "No user found!"})
             }
-            
             if(bcrypt.compareSync(password, rows[0].password))
             return done(null , false, {message: "Ooops Wrong password!."})
 
-
             return done(null, rows[0])
-    
         })
     })
 )
-
 
 passport.use(
     "local-signup",
@@ -54,25 +49,20 @@ passport.use(
                     newUser.id = rows.insertId
 
                     return done(null, newUser)
-                    
                 })
             }
         })
-        
     })
 )
 
 passport.serializeUser(function(user, done) {
-    done(null,user.id)
-    
+    done(null,user.id) 
 })
 
 passport.deserializeUser(function(id, done) {
     model.selectWhere("id", id, function (err, rows){
         done(err, rows[0])
-        
     })
-    
 })
 
 
