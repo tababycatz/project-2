@@ -1,12 +1,13 @@
-var mysql = require("mysql2");
+var mysql = require("mysql");
+var mysql2 = require("mysql2");
 require("dotenv").config()
 
 var connection;
 
 if(process.env.JAWSDB_URL) {
-    connection = mysql.createConnection(process.env.JAWSDB_URL)
+    connection = mysql2.createConnection(process.env.JAWSDB_URL)
 } else {
-    connection = mysql.createConnection({
+    connection = mysql2.createConnection({
         "port": 3306,
         "host": process.env.HOST,
         "user": process.env.USERID,
@@ -22,6 +23,14 @@ connection.connect(function (err) {
     }
 
     console.log("connected as id: " + connection.threadID)
+})
+
+var connection2 = mysql.createConnection({
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "       ",
+    databse: "pawesome_db"
 })
 
 
