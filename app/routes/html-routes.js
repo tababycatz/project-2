@@ -1,33 +1,33 @@
-var path = require("path")
+var path = require("path");
 
 var isAuthenticated = function( req, res, next) {
     if(req.user) {
         return next()
     }
     return res.redirect("/")
-}
+};
+
+//get methods for the login - passport pages :: By Luis//
+//NOTE:: members_home_page.html and signup.html are dummy pages//
 
 module.exports = function(app) {
     app.get("/",function( req, res) {
         if (req.user) {
-            res.redirect("/members_home_Page")
+            res.redirect("/../public/home.html")
         }
         res.sendFile(path.join(__dirname, "../public/signup.html"))
-        })
+        });
     app.get("/login", function(req, res) {
         if(req.user) {
-            res.redirect("/members_home_page")
+            res.redirect("")
         }
-        res.sendFile(path.join(__dirname, "../public/members_home_page.html"))
-    })
+        res.sendFile(path.join(__dirname, "../public/home.html"))
+    });
     app.get("/members", isAuthenticated, function(req, res) {
         res.sendFile(path.join(__dirname, "../public/members_home_page.html"))
-    }) 
-}
+    });
 
-var path = require("path");
-
-module.exports = function (app) {
+//get methods for all html pages//
 
     app.get("/", function (req, res) {
         res.redirect("/home")
@@ -66,5 +66,5 @@ module.exports = function (app) {
     });
 
 
-}
+};
 
