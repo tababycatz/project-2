@@ -1,18 +1,12 @@
-
-  
  body, html {
       height: 100%;
-      font-family: Poppins-Regular, sans-serif;
+      font-family: Poppins-Regular, sans-serif;      
   }
   
-.page1 {
 
-  background: #232323;
-
+h1 {
+  font-family: 'Rock Salt', cursive;
 }
-
-
-
 
  /* remove outline for input area of text in email & pw fields */
   input {
@@ -43,6 +37,16 @@
   }
   
   
+
+ 
+  .img-responsive {
+    height: 50%;
+    width: 50%;
+  }
+
+
+
+
 
   
   .wrap-login {
@@ -88,14 +92,14 @@
     width: 560px;
     min-height: 100vh;
     display: block;
-    background-color: #f7f7f7;
+    /* background-color: #f7f7f7; */
     padding: 173px 55px 55px 55px;
   }
   
   .login-title {
     width: 100%;
     display: block;
-    font-family: Poppins-Regular;
+    font-family:'Handlee', cursive;
     font-size: 30px;
     color: #333333;
     line-height: 1.2;
@@ -166,13 +170,6 @@
     background: #333333;
   }
   
-/* category pages */
-  body {
-    background:gray;
-    background: -webkit-linear-gradient(to right, #00b09b, #96c93d);
-    background: linear-gradient(to right, #00b09b, #96c93d);
-    min-height: 100vh;
-  }
   
   .text-gray {
     color: #aaa;
@@ -180,44 +177,19 @@
 
 /* add to cart buttons */
 
-  
-  .add-to-cart-button {
-    -moz-box-shadow:inset 0px -1px 0px 0px #bee2f9;
-    -webkit-box-shadow:inset 0px -1px 0px 0px #bee2f9;
-    box-shadow:inset 0px -1px 0px 0px #bee2f9;
-    background-color:transparent;
-    -webkit-border-top-left-radius:0px;
-    -moz-border-radius-topleft:0px;
-    border-top-left-radius:0px;
-    -webkit-border-top-right-radius:0px;
-    -moz-border-radius-topright:0px;
-    border-top-right-radius:0px;
-    -webkit-border-bottom-right-radius:0px;
-    -moz-border-radius-bottomright:0px;
-    border-bottom-right-radius:0px;
-    -webkit-border-bottom-left-radius:0px;
-    -moz-border-radius-bottomleft:0px;
-    border-bottom-left-radius:0px;
-  text-indent:0px;
-    border:1px solid #3866a3;
-    display:inline-block;
-    color:#14396a;
-    font-family:Arial Black;
-    font-size:14px;
-    font-weight:bold;
-    font-style:normal;
-  height:65px;
-    line-height:65px;
-  width:131px;
-    text-decoration:none;
-    text-align:center;
-    text-shadow:1px 1px 50px #7cacde;
-  }.add-to-cart-button:active {
-    position:relative;
-    top:1px;
-  }
 
-
-  .fas fa-shopping-cart {
+  .glyphicon-shopping-cart {
     color: white;
   }
+
+  .login,
+.image {
+  min-height: 70vh;
+}
+
+.bg-image {
+  background-image: url("https://media.giphy.com/media/FDHDP7DREKSlYtHm43/giphy.gif"); 
+  background-color: white;
+  background-size: cover;
+  background-position: center center;
+}
