@@ -1,4 +1,5 @@
 var passport = require("../config/passport")
+var path = require("path");
 
 module.exports = function(app) {
     function auth (req, res, next, authMethod) {
@@ -41,7 +42,6 @@ module.exports = function(app) {
     }) 
 }
 // ============================================== //
-var path = require("path");
 
 module.exports = function(app) {
     app.get("/api/friends", function (req, res) {
