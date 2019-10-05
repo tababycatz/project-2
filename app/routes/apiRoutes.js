@@ -2,6 +2,9 @@ var path = require("path");
 var array = require("../data/");
 
 
+//get method from products table//
+//post method for login/checkout and add items to cart/checkout//
+
 module.exports = function(app) {
     app.get("/api/friends", function (req, res) {
         res.json(friendsData);
