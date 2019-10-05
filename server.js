@@ -43,16 +43,11 @@ var app = express();
 app.use(express.static("public"));
 
 // Routes
-<<<<<<< HEAD
-require("../routes/apiRoutes")(app);
-require("../routes/htmlRoutes")(app);
-=======
 // require("./routes/apiRoutes")(app);
 // require("./routes/htmlRoutes")(app);
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
->>>>>>> 6cb89e90f9d7f7b2df446de2b433380b1fc8c352
 
 // Set Handlebars.
 // var exphbs = require("express-handlebars");
