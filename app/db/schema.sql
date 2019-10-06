@@ -40,4 +40,6 @@ CREATE TABLE orders (
   PRIMARY KEY (id)
 );
 
+FOREIGN KEY (USER_ID) REFERENCES user_login(MEMBER_ID);
+
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'
