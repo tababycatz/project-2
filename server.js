@@ -7,7 +7,7 @@ var mysql = require("mysql");
 var mysql2 = require("mysql2");
 
 app.use(express.static("public"));
-// app.use(session({ secret: "keyboard cat" , resave: true, saveUninitialized}))
+app.use(session({secret: "keyboard cat" , resave: true, saveUninitialized:true})) //middleware for passport.js//
 app.use(passport.initialize())
 app.use(passport.session())
 
