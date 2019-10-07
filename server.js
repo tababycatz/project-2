@@ -56,7 +56,7 @@ app.use(express.json());
 // app.set("view engine", "handlebars");
 
 // Import routes and give the server access to them.
-// var routes = require("./controllers/catsController.js");
+var routes = require("./app/routes/apiRoutes.js");
 
 
 app.use(routes);

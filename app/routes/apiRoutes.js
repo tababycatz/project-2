@@ -1,40 +1,16 @@
-var path = require("path");
-var array = require("../data/");
+var express = require("express");
 
+var router = express.Router();
 
-module.exports = function(app) {
-    app.get("/api/friends", function (req, res) {
-        res.json(friendsData);
-    })
+var db = require("../models/index.js");
 
-    app.post("/api/friends", function(req, res){
-        
-        var friendMatch = {
-            matchName: "",
-            matchPic: "",
-            totalDifference: 1000
-
-        }
-        
-        var newFriend = req.body;
-        var friendAnswer = newFriend.scores;
-        var friendDifference = 0;
-
-        for (let i = 0; i < friendsData.length; i++) {
-            friendDifference = 0;
-            for (let j = 0; j < friendAnswer.length; j++) {
-                friendDifference += Math.abs(parseInt(newFriend[i].scores[j]) - parseInt(friendAnswer[j]));
-            }
-            if (friendDifference <= friendMatch.totalDifference) {
-                totalDifference = diff;
-                friendMatch.matchName = friendsData[i].name;
-                friendMatch.matchPic = friendsData[i].photo;
-                friendMatch.totalDifference = friendDifference;
-            }
-        };
-
-        friendsData.push(newFriend);
-        res.json({friendMatch});
-    })
-    // console.log(req.body);
-};
+app.get("/api/products", function(req, res) {
+    connection.query("SELECT * FROM products;", function(err, data) {
+      if (err) {
+        return res.status(500).end();
+      }
+  
+      res.json(data);
+    });
+  });
+  module.exports = router;
