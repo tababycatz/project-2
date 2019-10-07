@@ -1,6 +1,7 @@
 var mysql = require("mysql");
 var mysql2 = require("mysql2");
-require("dotenv").config()
+const Sequelize = require("sequelize");
+require("dotenv").config();
 
 var connection;
 
@@ -32,6 +33,12 @@ var connection2 = mysql.createConnection({
     "password2": process.env.PASSWORD2,
     "databse2": process.env.DATABASE2
 })
+
+const sequelize = new Sequelize("products", "root", "", {
+    host: "127.0.0.1",
+    dialect: "mysql",
+    operatorsAliases: false
+  });
 
 
 // Export connection for our ORM to use.
