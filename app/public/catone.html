@@ -46,11 +46,16 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-            <a href="#"><i class="fa fa-shopping-cart" style="font-size:30px;color: gray"></i></a>
-
+                      <!-- Show Cart Info -->
+                      <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
+                        <span class="cart-info__icon mr-lg-3"><a href="../public/checkout.html"><i id="cart" class="fa fa-shopping-cart" style="font-size:30px;color: gray"></i></a> </span>
+                        <p class="mb-0 text-capitalize"><span id="item-count">X </span></p>
+                    </div>
                     </li>
                 </ul>
             </div>
+            <!-- Cart -->
+            <div id="cart" class="cart"></div></div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
@@ -236,6 +241,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="/app/public/js/main.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
