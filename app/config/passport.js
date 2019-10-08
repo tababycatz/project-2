@@ -1,7 +1,7 @@
 var passport = require("passport");
 var localStrategy = require("passport-local").Strategy;
 
-var bcrypt = require("bcrypt-node.js");
+var bcrypt = require("bcrypt-nodejs");
 var model = require("../models/users")
 
 passport.use(
@@ -20,7 +20,7 @@ passport.use(
             }
             
             if(bcrypt.compareSync(password, rows[0].password))
-            return done(null , false, {message: "Ooops Wrong password!."})
+            return done(null , false, {message: "Ooops! Wrong password!."})
 
 
             return done(null, rows[0])
@@ -63,7 +63,7 @@ passport.use(
 )
 
 passport.serializeUser(function(user, done) {
-    done(null,user.id)
+    done(null, user.id)
     
 })
 

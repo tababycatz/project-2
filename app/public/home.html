@@ -68,12 +68,12 @@
                                         <div class="col-lg-9 col-xl-7 mx-auto">
                                             <h3 class="display-4"><i class="fas fa-paw"></i> PAWESOME!</h3>
                                             <p class="text-muted mb-4">Welcome, login/sign up and explore.</p>
-                                            <form>
+                                            <form action="../models/users.js" method="POST">
                                                 <div class="form-group mb-3">
-                                                    <input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                                    <input id="inputEmail"  name="username" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                                 </div>
                                                 <div class="form-group mb-3">
-                                                    <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                                    <input id="inputPassword" name="password" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                                 </div>
                                                 <div class="custom-control custom-checkbox mb-3">Remember login
                                                     <input id="customCheck1" type="checkbox" checked class="custom-control-input">

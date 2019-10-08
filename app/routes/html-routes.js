@@ -1,4 +1,4 @@
-var path = ("path")
+var path = require("path")
 
 var isAuthenticated = function( req, res, next) {
     if(req.user) {
@@ -15,20 +15,20 @@ module.exports = function(app) {
             res.redirect("/members_home_Page")
         }
 
-        res.sendFile(path.join(__dirname, "../public/signup.html"))
+        res.sendFile(path.join(__dirname, "../public/home.html"))
         })
 
     app.get("/login", function(req, res) {
         if(req.user) {
-            res.redirect("/members_home_page")
+            res.redirect("/login")
         }
 
-        res.sendFile(path.join(__dirname, "../public/members_home_page.html"))
+        res.sendFile(path.join(__dirname, "./public/home.html"))
     })
 
 
     app.get("/members", isAuthenticated, function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/members_home_page.html"))
+        res.sendFile(path.join(__dirname, "./public/members_home_page.html"))
     })
 
     
