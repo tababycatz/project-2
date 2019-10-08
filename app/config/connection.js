@@ -1,10 +1,7 @@
 var mysql = require("mysql");
 var mysql2 = require("mysql2");
-const Sequelize = require("sequelize");
-require("dotenv").config();
-
+require("dotenv").config()
 var connection;
-
 if(process.env.JAWSDB_URL) {
     connection = mysql2.createConnection(process.env.JAWSDB_URL)
 } else {
@@ -16,30 +13,24 @@ if(process.env.JAWSDB_URL) {
         "database": process.env.DATABASE
     })
 }
-
 connection.connect(function (err) {
     if(err) {
         console.log("error connecting " + err.stack)
         return;
     }
-
     console.log("connected as id: " + connection.threadID)
 })
-
 var connection2 = mysql.createConnection({
-    "host2": process.env.host2,
-    "port2": 3306,
-    "user2": process.env.USER2,
-    "password2": process.env.PASSWORD2,
-    "databse2": process.env.DATABASE2
+    host: "localhost",
+    port: 3306,
+    user: "root",
+    password: "root",
+    databse: "pawesome_db"
 })
-
-const sequelize = new Sequelize("products", "root", "", {
-    host: "127.0.0.1",
-    dialect: "mysql",
-    operatorsAliases: false
-  });
-
-
 // Export connection for our ORM to use.
 module.exports = connection;
+Collapse
+
+
+
+
