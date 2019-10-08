@@ -16,6 +16,8 @@ var db = {
       orm.all("products", function(res) {
         cb(res);
       });
-    }}
+    },
+    
+  }
 
 module.exports = db;
