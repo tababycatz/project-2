@@ -1,6 +1,10 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "handlebars-boilerplate",
+=======
+  "name": "project-2",
+>>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 =======
   "name": "project-2",
 >>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
@@ -17,6 +21,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
 <<<<<<< HEAD
   "dependencies": {
     "all": "0.0.0",
@@ -50,6 +55,11 @@
   "bugs": {
     "url": "https://github.com/tababycatz/project-2/issues"
   },
+=======
+  "bugs": {
+    "url": "https://github.com/tababycatz/project-2/issues"
+  },
+>>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
   "homepage": "https://github.com/tababycatz/project-2#readme",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",

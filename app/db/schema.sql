@@ -12,7 +12,10 @@ CREATE TABLE products (
   PRIMARY KEY (ID)
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 =======
 >>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
@@ -66,9 +69,12 @@ values("DC04","T-Shirt "," Big Papaw Dog T-Shirt","CLOTHING", 9.99, 20);
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
 values("DC05","Hoodie","Cozy Critter Dog Hoodie","CLOTHING", 19.29, 20);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 =======
 >>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 /*
@@ -81,7 +87,10 @@ CREATE TABLE USER_LOGIN (
   PRIMARY KEY (MEMBER_ID)
 );
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 =======
 >>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 CREATE TABLE ORDERS (
@@ -99,10 +108,13 @@ CREATE TABLE ORDERS (
 INSERT INTO ORDERS (ORDER_ID, MEMBER_ID, ITEM_ID, ITEM_NAME, QUANTITY , PRICEPERITEM,TOTAL)
 VALUES (1, 123, "101", "Puppy Bites", 1, 25.39, 25.39)*/
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 =======
 >>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'root'
