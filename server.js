@@ -1,21 +1,24 @@
 var express = require("express");
-var bodyParser = require("body-parser");
+var path = require("path");
 var session = require("express-session");
-var passport = require("./config/passport");
-
-var PORT = process.env.PORT || 8080;
-
+var passport = require("passport");
 var app = express()
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+var PORT = process.env.PORT || 8080;
+var mysql = require("mysql");
+var mysql2 = require("mysql2");
+
 app.use(express.static("public"));
-app.use(session({ secret: "keyboard cat" , resave: true, saveUninitialized}))
+app.use(session({secret: "keyboard cat" , resave: true, saveUninitialized:true})) //middleware for passport.js//
 app.use(passport.initialize())
 app.use(passport.session())
 
-require("./routes/api-routes")(app);
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
+// require("./routes/api-routes")(app);
 require("./routes/html-routes")(app);
 
-app.listen(PORT, function(){
-    console.log("Listening on port %s. visit http//localhost:%s/")
-})
+app.listen(PORT, function () {
+    console.log("App listening on PORT " + PORT);
+});
