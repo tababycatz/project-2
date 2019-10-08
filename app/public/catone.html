@@ -60,7 +60,7 @@
     <link href="https://fonts.googleapis.com/css?family=Handlee|Rock+Salt|Suravaram&display=swap" rel="stylesheet">
 
     <!-- Custom CSS-->
-	<link rel="stylesheet" type="text/css" href="<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 
 </head>
 <body class="all-pages">
@@ -94,11 +94,6 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                      <!-- Show Cart Info -->
-                      <div id="cart-info" class="nav-info align-items-center cart-info d-flex justify-content-between mx-lg-5">
-                        <span class="cart-info__icon mr-lg-3"><a href="../public/checkout.html"><i id="cart" class="fa fa-shopping-cart" style="font-size:30px;color: gray"></i></a> </span>
-                        <p class="mb-0 text-capitalize"><span id="item-count">X </span></p>
-                    </div>
                             <a href="checkout.html"><i class="fa fa-shopping-cart" style="font-size:30px;color: gray"></i></a>
 
                     </li>
@@ -137,7 +132,7 @@
                 <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
                 <p class="font-italic text-muted mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
                 <div class="d-flex align-items-center justify-content-between mt-1">
-                  <h6 class="font-weight-bold my-2">$120.00</h6>
+                  <h6 class="price" class="font-weight-bold my-2">$120.00</h6>
                   <ul class="list-inline small">
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
@@ -146,12 +141,13 @@
                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                   </ul>
                 </div>
-            <!-- product image -->
-        </div><img src="https://placehold.it/200x200" alt="AGB photo 404" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-        <!-- add to cart button -->
-                    <br>
-                    <br>
-                    <button id="add-to-cart-button">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
+                <!-- product image -->
+              </div><img src="https://placehold.it/200x200" alt="AGB photo 404" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+              <!-- add to cart button -->
+              <br>
+              <br>
+              <button class="addcart">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
+              Qty <input type="number" class="qty" value="1" min="1">
                     <!-- End -->
           </li>
           <!-- End -->
@@ -164,7 +160,7 @@
                 <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
                 <p class="font-italic text-muted mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
                 <div class="d-flex align-items-center justify-content-between mt-1">
-                  <h6 class="font-weight-bold my-2">$99.00</h6>
+                  <h6 class="price" class="font-weight-bold my-2">$99.00</h6>
                   <ul class="list-inline small">
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
@@ -173,12 +169,13 @@
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                   </ul>
                 </div>
-              <!-- product image -->
-            </div><img src="https://placehold.it/200x200" alt="AGB photo 404" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-            <!-- add to cart button -->
-                        <br>
-                        <br>
-                        <button id="add-to-cart-button">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
+                <!-- product image -->
+              </div><img src="https://placehold.it/200x200" alt="AGB photo 404" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+              <!-- add to cart button -->
+              <br>
+              <br>
+              <button class="addcart">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
+              Qty <input type="number" class="qty" value="1" min="1">
   
           <!-- list group item -->
           <li class="list-group-item">
@@ -188,7 +185,7 @@
                 <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
                 <p class="font-italic text-muted mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
                 <div class="d-flex align-items-center justify-content-between mt-1">
-                  <h6 class="font-weight-bold my-2">$140.00</h6>
+                  <h6 class="price" class="font-weight-bold my-2">$140.00</h6>
                   <ul class="list-inline small">
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
@@ -197,13 +194,14 @@
                     <li class="list-inline-item m-0"><i class="fa fa-star-o text-gray"></i></li>
                   </ul>
                 </div>
-              <!-- product image -->
-            </div><img src="https://placehold.it/200x200" alt="AGB photo 404" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-            <!-- add to cart button -->
-                        <br>
-                        <br>
-                        <button id="add-to-cart-button">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
-                        <!-- End -->
+                <!-- product image -->
+              </div><img src="https://placehold.it/200x200" alt="AGB photo 404" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
+              <!-- add to cart button -->
+              <br>
+              <br>
+              <button class="addcart">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
+              Qty <input type="number" class="qty" value="1" min="1">
+              <!-- End -->
           </li>
           <!-- End -->
   
@@ -215,7 +213,7 @@
                 <h5 class="mt-0 font-weight-bold mb-2">Awesome product</h5>
                 <p class="font-italic text-muted mb-0 small">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit fuga autem maiores necessitatibus.</p>
                 <div class="d-flex align-items-center justify-content-between mt-1">
-                  <h6 class="font-weight-bold my-2">$220.00</h6>
+                  <h6 class="price" class="font-weight-bold my-2">$220.00</h6>
                   <ul class="list-inline small">
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
@@ -224,13 +222,14 @@
                     <li class="list-inline-item m-0"><i class="fa fa-star text-success"></i></li>
                   </ul>
                 </div>
-
-<!-- product image -->
+                
+                <!-- product image -->
               </div><img src="https://placehold.it/200x200" alt="AGB photo 404" alt="Generic placeholder image" width="200" class="ml-lg-5 order-1 order-lg-2">
-<!-- add to cart button -->
-            <br>
-            <br>
-            <button id="add-to-cart-button">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
+              <!-- add to cart button -->
+              <br>
+              <br>
+              <button class="addcart">Select to <i class="fa fa-shopping-cart" style="font-size:20px;color: gray;"></i> </button>
+              Qty <input type="number" class="qty" value="1" min="1">
            
             </div>
             <!-- End -->
@@ -349,7 +348,7 @@
         <!-- add to cart button -->
                     <br>
                     <br>
-                      <button class="add-to-cart-button">Add To Cart</button>
+                      <button class="addcart">Add To Cart</button>
             <!-- End -->
           </li>
           <!-- End -->
@@ -376,7 +375,7 @@
             <!-- add to cart button -->
                         <br>
                         <br>
-                          <button class="add-to-cart-button">Add To Cart</button>
+                          <button class="addcart">Add To Cart</button>
   
           <!-- list group item -->
           <li class="list-group-item">
@@ -400,7 +399,7 @@
             <!-- add to cart button -->
                         <br>
                         <br>
-                          <button class="add-to-cart-button">Add To Cart</button>
+                          <button class="addcart">Add To Cart</button>
             <!-- End -->
           </li>
           <!-- End -->
@@ -428,7 +427,7 @@
 <!-- add to cart button -->
             <br>
             <br>
-              <button class="add-to-cart-button">Add To Cart</button>
+              <button class="addcart">Add To Cart</button>
             </div>
             <!-- End -->
           </li>
