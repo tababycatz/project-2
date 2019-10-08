@@ -1,15 +1,14 @@
-ROP DATABASE IF EXISTS pawsome_DB;
+DROP DATABASE IF EXISTS pawsome_DB;
 CREATE DATABASE pawsome_DB;
 USE pawsome_DB;
 CREATE TABLE products (
-  ID INT  NOT NULL AUTO_INCREMENT,
   ITEM_ID VARCHAR(100) NOT NULL,
   ITEM_NAME VARCHAR(100) NOT NULL,
   ITEM_DESCRIPTION VARCHAR(500) NOT NULL,
   CATEGORY VARCHAR(200) NOT NULL,
   PRICE DECIMAL (10,2)NOT  NULL,
   STOCK_QUANTITY INT NULL,
-  PRIMARY KEY (ID)
+  PRIMARY KEY (ITEM_ID)
 );
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
  VALUES ("DT01", "Puppy Bites","YUMMY CHUMMIES GRAIN FREE WILD ALASKA DOG TREATS","TREATS", 25.39, 20);
@@ -44,7 +43,7 @@ values("TY05","Nerf ","Nerf Nylon Foam Megaton Disc for Dogs ","TOYS", 12.29, 20
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
 values("DA01","THERMAL BOWL ","Stainless steel construction will not harbor bacteria, does not stain, and will not absorb smells.","Accessories", 14.29, 20);
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
-values("DA02","Styled after a traditional bandana with the added benefits of the collar cover in that it can t come off","Accessories", 12.29, 20);
+values("DA02","COLLAR KERCHIEF","Styled after a traditional bandana with the added benefits of the collar cover in that it can t come off","Accessories", 12.29, 20);
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
 values("DA03"," LEASH ","leash makes sure you and your dog stand out at extended distances.","Accessories", 8.29, 20);
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
