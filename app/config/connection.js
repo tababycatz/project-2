@@ -32,18 +32,5 @@ module.exports = connection;
 Collapse
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-var connection = mysql.createConnection({
-  host: "localhost",
-  port: 3306,
-  user: "root",
-  password: "password",
-  database: "pawsome_DB"
-});
-=======
->>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
-=======
->>>>>>> 9d35fa18a37f7aacf1098cdce54095020b48eefc
 
 

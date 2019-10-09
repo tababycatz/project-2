@@ -6,3 +6,4 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const config = require('../config/#');
 const db = {};
+var orm = require("../config/orm.js");

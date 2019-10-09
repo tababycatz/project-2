@@ -51,7 +51,7 @@ values("TY05","Nerf ","Nerf Nylon Foam Megaton Disc for Dogs ","TOYS", 12.29, 20
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
 values("DA01","THERMAL BOWL ","Stainless steel construction will not harbor bacteria, does not stain, and will not absorb smells.","Accessories", 14.29, 20);
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
-values("DA02","Styled after a traditional bandana with the added benefits of the collar cover in that it can t come off","Accessories", 12.29, 20);
+values("DA02","COLLAR KERCHIEF","Styled after a traditional bandana with the added benefits of the collar cover in that it can t come off","Accessories", 12.29, 20);
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
 values("DA03"," LEASH ","leash makes sure you and your dog stand out at extended distances.","Accessories", 8.29, 20);
 INSERT INTO products (ITEM_ID, ITEM_NAME, ITEM_DESCRIPTION, CATEGORY, PRICE, STOCK_QUANTITY)
