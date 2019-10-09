@@ -1,4 +1,4 @@
- body, html {
+   body, html {
       height: 100%;
       font-family: Poppins-Regular, sans-serif;      
   }
@@ -185,11 +185,7 @@ input[type=text]:focus, input[type=password]:focus {
   outline: none;
 }
 
-/* Overwrite default styles of hr
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-} */
+
 
 /* Set a style for the submit button */
 .registerbtn {
@@ -217,4 +213,3 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
-
