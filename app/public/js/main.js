@@ -1,20 +1,9 @@
-// $(document).ready(fucntion() {
+$('.addcart').click(function(){
 
-//show cart//
-// (function(){
-// const cartInfo = document.getElementById('cart-info');
-// const cart = document.getElementById('cart');
-
-// cartInfo.addEventListener('click',function(){
-//   cart.classList.toggle('show-cart');
-// })
-
-// })();
-
-//add items to the cart //
+var item = $(this).siblings('.item').text();
+var price = $(this).siblings('.price').text();
+var qty = $(this).siblings('.qty').text();
+var total = qty * price;
 
 
-
-
-
-//}) //document.ready end//
+});
