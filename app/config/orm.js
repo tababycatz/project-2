@@ -9,7 +9,7 @@ var connection = require("../config/connection");
 var orm = {
 
   all: function(tableInput, cb) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM " + tableInput + ";";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
@@ -18,7 +18,7 @@ var orm = {
     });
   },
     select_food: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE  FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE  FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -28,7 +28,7 @@ var orm = {
     });
    },
    select_toys: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -38,7 +38,7 @@ var orm = {
     });
    },
    select_treats: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -48,7 +48,7 @@ var orm = {
     });
    },
    select_clothing: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -58,7 +58,7 @@ var orm = {
     });
    },
    select_Accessories: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -67,29 +67,30 @@ var orm = {
       console.log(result);
     });
    },
-  //  
-  
-  // selectAndOrder: function(whatToSelect, table, orderCol) {
-  //   var queryString = "SELECT ?? FROM ?? ORDER BY ?? DESC";
-  //   console.log(queryString);
-  //   connection.query(queryString, [whatToSelect, table, orderCol], function(err, result) {
-  //     if (err) throw err;
-  //     console.log(result);
-  //   });
-  // },
-  // findWhoHasMost: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo) {
-  //   var queryString =
-  //     "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id GROUP BY ?? ORDER BY count DESC LIMIT 1";
 
-  //   connection.query(
-  //     queryString,
-  //     [tableOneCol, tableOneCol, tableOne, tableTwo, tableTwo, tableTwoForeignKey, tableOne, tableOneCol],
-  //     function(err, result) {
-  //       if (err) throw err;
-  //       console.log(result);
-  //     }
-    // );
-   }
-};
+   insert: function(table, objColVals, condition, cb) {
+    var queryString = "INSERT INTO orders " + table;
+
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
+    queryString += " WHERE ";
+    queryString += condition;
+
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+   
+   
+
+  
+  
+} ;
+
 
 module.exports = orm;

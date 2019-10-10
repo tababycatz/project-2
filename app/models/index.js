@@ -41,8 +41,8 @@ var db = {
         cb(res);
       });
     },
-    update: function(objColVals, condition, cb) {
-      orm.update("orders", objColVals, condition, function(res) {
+    create: function(cols, vals, cb) {
+      orm.create("orders", cols, vals, function(res) {
         cb(res);
       });
     },
