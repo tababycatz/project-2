@@ -17,8 +17,45 @@ router.get("/api/main", function(req, res) {
   db.all( 
     function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({data:result});
   });
 });
+router.get("/api/food", function(req, res) {
+  db.select_food("products", "CATEGORY", "food",
+    function(result) {
+    // Send back the ID of the new quote
+    res.json({data: result});
+  });
+});
+router.get("/api/", function(req, res) {
+  db.select_toys("products", "CATEGORY", "TOYS",
+    function(result) {
+    // Send back the ID of the new quote
+    res.json({data: result});
+  });
+});
+router.get("/api/main", function(req, res) {
+  db.select_treats("products", "CATEGORY", "TREATS",
+    function(result) {
+    // Send back the ID of the new quote
+    res.json({data: result});
+  });
+});
+router.get("/api/main", function(req, res) {
+  db.select_clothing("products", "CATEGORY", "CLOTHING",
+    function(result) {
+    // Send back the ID of the new quote
+    res.json({data: result});
+  });
+});
+router.get("/api/main", function(req, res) {
+  db.select_Accessories("products", "CATEGORY", "Accessories",
+    function(result) {
+    // Send back the ID of the new quote
+    res.json({data: result});
+  });
+});
+
+
 
   module.exports = router;

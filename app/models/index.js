@@ -16,7 +16,36 @@ var db = {
         cb(res);
       });
     },
-    
+    select_food: function(cols, vals, cb) {
+      orm.select_food("products", cols, vals, function(res) {
+        cb(res);
+      });
+    },
+    select_toys: function(cols, vals, cb) {
+      orm.select_toys("products", cols, vals, function(res) {
+        cb(res);
+      });
+    },
+    select_treats: function(cols, vals, cb) {
+      orm.select_treats("products", cols, vals, function(res) {
+        cb(res);
+      });
+    },
+    select_clothing: function(cols, vals, cb) {
+      orm.select_clothing("products", cols, vals, function(res) {
+        cb(res);
+      });
+    },
+    select_Accessories: function(cols, vals, cb) {
+      orm.select_Accessories("products", cols, vals, function(res) {
+        cb(res);
+      });
+    },
+    update: function(objColVals, condition, cb) {
+      orm.update("orders", objColVals, condition, function(res) {
+        cb(res);
+      });
+    },
   }
 
 module.exports = db;
