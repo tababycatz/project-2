@@ -9,21 +9,66 @@ var connection = require("../config/connection");
 var orm = {
 
   all: function(tableInput, cb) {
-    var queryString = "SELECT * FROM " + tableInput + ";";
+    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
       cb(result);
     });
-    
-    selectWhere: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT * FROM ?? WHERE ?? = ?";
+  },
+    select_food: function(tableInput, colToSearch, valOfCol) {
+    var queryString = "SELECT SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE  FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
-      if (err) throw err;
+      if (err) {
+        throw err;
+      }
+      cb(result);
       console.log(result);
     });
-  // },
+   },
+   select_toys: function(tableInput, colToSearch, valOfCol) {
+    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+      console.log(result);
+    });
+   },
+   select_treats: function(tableInput, colToSearch, valOfCol) {
+    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+      console.log(result);
+    });
+   },
+   select_clothing: function(tableInput, colToSearch, valOfCol) {
+    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+      console.log(result);
+    });
+   },
+   select_Accessories: function(tableInput, colToSearch, valOfCol) {
+    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
+      if (err) {
+        throw err;
+      }
+      cb(result);
+      console.log(result);
+    });
+   },
+  //  
+  
   // selectAndOrder: function(whatToSelect, table, orderCol) {
   //   var queryString = "SELECT ?? FROM ?? ORDER BY ?? DESC";
   //   console.log(queryString);
@@ -43,7 +88,7 @@ var orm = {
   //       if (err) throw err;
   //       console.log(result);
   //     }
-  //   );
+    // );
    }
 };
 
