@@ -56,6 +56,5 @@ router.get("/api/main", function(req, res) {
   });
 });
 
+  module.exports = router,
 
-
-  module.exports = router;
