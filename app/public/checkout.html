@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-
+​
 <head>
   <title>Checkout</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+​
   <!-- Bootstrap Core CSS -->
   <link href="styles/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
   <script src="https://kit.fontawesome.com/ea66d7be37.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Handlee|Rock+Salt|Suravaram&display=swap" rel="stylesheet">
-
-
+​
+​
   <!-- Custom CSS-->
   <link rel="stylesheet" type="text/css" href="styles/styles.css">
   <script src="js/main.js" async></script>
 </head>
-
+​
 <body class="all-pages">
   <div class="container">
     <div class="py-5 text-center">
@@ -36,7 +36,7 @@
             </button>
             <a class="navbar-brand" href="#">
               <i class="fas fa-paw"></i>
-
+​
             </a>
           </div>
           <!-- Navbar links -->
@@ -45,7 +45,7 @@
               <li>
                 <a href="home.html">HOME</a>
               </li>
-
+​
               <li class="active">
                 <a href="categories.html">SHOP</a>
               </li>
@@ -60,7 +60,7 @@
         </div>
         <img class="d-block mx-auto mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt=""
           width="72" height="72">
-
+​
     </div>
     <br>
     <br>
@@ -71,6 +71,8 @@
     </h3>
     </font>
     </h3>
+​
+    <!-- whoel cart starts -->
     <div class="wholeCart">
     <div class="row">
       <div class="col-md-4 order-md-2 mb-4">
@@ -85,8 +87,13 @@
               <small class="text-muted">Brief description</small>
             </div>
             <span class="price" class="text-muted">$12</span>
-            Qty <input class="cart-quantity" type="number" value="1">
-            </input><br><br>
+            Qty <select class="qtyCart">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select><br><br>
             <button type="button" class="removeItem">REMOVE</button>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -95,8 +102,13 @@
               <small class="text-muted">Brief description</small>
             </div>
             <span class="price" class="text-muted">$8</span>
-            Qty <input class="cart-quantity" type="number" value="1">
-          </input><br><br>
+            Qty <select class="qtyCart">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select><br><br>
             <button type="button" class="removeItem">REMOVE</button>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
@@ -105,22 +117,29 @@
               <small class="text-muted">Brief description</small>
             </div>
             <span class="price" class="text-muted">$5</span>
-            Qty <input class="cart-quantity" type="number" value="1">
-          </input><br><br>
+            Qty <select class="qtyCart">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select><br><br>
             <button type="button" class="removeItem">REMOVE</button>
           </li>
-
+​
           <li class="list-group-item d-flex justify-content-between">
             <span>Total (USD)</span>
-            <strong class="cart-total">$20</strong>
+            <strong class="total">$20</strong>
           </li>
         </ul>
       </div>
     </div> 
   </div>
     <!--end of wholeCart-->
-
-      <div class="col-md-8 order-md-1">
+​
+<!-- Billing information form -->
+​
+      <div class="col-md-4 order-md-1">
         <h5 class="mb-3"><u>Billing address</u></h5>
         <br>
         <form class="needs-validation" novalidate>
@@ -128,34 +147,30 @@
             <div class="col-md-6 mb-3">
               <label for="firstName">First name</label>
               <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
+              
             </div>
             <div class="col-md-6 mb-3">
               <label for="lastName">Last name</label>
               <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
+             
               <br>
-
+​
             </div>
-
+​
             <div class="mb-3">
               <br>
               <br>
-
+​
               <label for="address">Address</label>
               <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
-              <div class="invalid-feedback">
-                Please enter your shipping address.
-              </div>
+              
             </div>
-
+​
             <br>
             <br>
-
+            
+​
+<!-- choose country -->
             <div class="row">
               <div class="col-md-5 mb-3">
                 <label for="country">Country</label>
@@ -163,42 +178,51 @@
                   <option value="">Choose...</option>
                   <option>United States</option>
                 </select>
-                <div class="invalid-feedback">
-                  Please select a valid country.
-                </div>
-              </div>
+               </div>
+​
+​
+               <!-- choose state -->
               <div class="col-md-4 mb-3">
                 <label for="state">State</label>
                 <select class="custom-select d-block w-100" id="state" required>
                   <option value="">Choose...</option>
-                  <option>California</option>
+                  <option>New Jersey</option>
                 </select>
-                <div class="invalid-feedback">
-                  Please provide a valid state.
-                </div>
-              </div>
+               </div>
+​
+<!-- Zipe code entry -->
+​
               <div class="col-md-3 mb-3">
-                <label for="zip">Zip</label>
+                <label for="zip">Zip Code</label>
                 <input type="text" class="form-control" id="zip" placeholder="" required>
-                <div class="invalid-feedback">
-                  Zip code required.
                 </div>
-              </div>
             </div>
+​
+<!-- shipping address check boxes save -->
+​
             <hr class="mb-4">
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="same-address">
-              <label class="custom-control-label" for="same-address">Shipping address is the same as my billing
-                address</label>
+ <label class="custom-control-label" for="same-address">Shipping address is the same as my billing address</label>
+​
             </div>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="save-info">
-              <label class="custom-control-label" for="save-info">Save this information for next time</label>
+ <label class="custom-control-label" for="save-info">Save this information for next time</label>
             </div>
+​
+​
+<!-- end of shipping address information -->
+​
             <hr class="mb-4">
-
-            <h4 class="mb-3">Payment</h4>
-
+​
+​
+​
+<!-- payment option section -->
+​
+<h4 class="mb-3">Payment</h4>
+​
+<!-- debit/credit transaction type selection -->
             <div class="d-block my-3">
               <div class="custom-control custom-radio">
                 <input id="credit" name="paymentMethod" type="radio" class="custom-control-input" checked required>
@@ -208,62 +232,68 @@
                 <input id="debit" name="paymentMethod" type="radio" class="custom-control-input" required>
                 <label class="custom-control-label" for="debit">Debit card</label>
               </div>
-              <div class="custom-control custom-radio">
-                <input id="paypal" name="paymentMethod" type="radio" class="custom-control-input" required>
-                <label class="custom-control-label" for="paypal">Paypal</label>
               </div>
-            </div>
-
+​
+              <hr class="mb-4">
+​
+<!--  end of selection for debit/credit -->
+​
+<br>
+​
+<!-- name/credit card # information entry  -->
+​
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="cc-name">Name on card</label>
                 <input type="text" class="form-control" id="cc-name" placeholder="" required>
-                <small class="text-muted">Full name as displayed on card</small>
-                <div class="invalid-feedback">
-                  Name on card is required
-                </div>
+               
+               
               </div>
               <div class="col-md-6 mb-3">
                 <label for="cc-number">Credit card number</label>
                 <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                <div class="invalid-feedback">
-                  Credit card number is required
-                </div>
+                
               </div>
             </div>
+<br>
+<!-- end of row -->
+​
+<!-- row for expiration/ cvv -->
+​
             <div class="row">
               <div class="col-md-3 mb-3">
                 <label for="cc-expiration">Expiration</label>
                 <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                <div class="invalid-feedback">
-                  Expiration date required
-                </div>
+                
               </div>
+​
               <div class="col-md-3 mb-3">
                 <label for="cc-expiration">CVV</label>
                 <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                <div class="invalid-feedback">
-                  Security code required
-                </div>
+                
               </div>
             </div>
+​
+<!-- end of row for exp/cvv -->
+​
+<!-- checkout button row -->
+​
             <hr class="mb-4">
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
             <br>
             <br>
         </form>
       </div>
     </div>
   </div>
-    <br>
-    <br>
+    
     <hr>
     <div class="footer">
       <center> Pawesome! <i class="fas fa-paw"></i> | 2019 &copy;</center>
     </div>
-
+​
   </div>
-
+​
   <!-- Bootstrap core JavaScript
         ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
@@ -278,28 +308,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js"
     integrity="sha256-ifihHN6L/pNU1ZQikrAb7CnyMBvisKG3SUAab0F3kVU=" crossorigin="anonymous"></script>
-  <script>
-    // Example starter JavaScript for disabling form submissions if there are invalid fields
-    (function () {
-      'use strict';
-
-      window.addEventListener('load', function () {
-        // Fetch all the forms we want to apply custom Bootstrap validation styles to
-        var forms = document.getElementsByClassName('needs-validation');
-
-        // Loop over them and prevent submission
-        var validation = Array.prototype.filter.call(forms, function (form) {
-          form.addEventListener('submit', function (event) {
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-            }
-            form.classList.add('was-validated');
-          }, false);
-        });
-      }, false);
-    })();
-  </script>
+ 
 </body>
-
+​
 </html>

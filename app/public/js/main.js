@@ -6,7 +6,6 @@ if (document.readyState == 'loading') {
 
 function ready() {
     var removeCartItemBtn = document.getElementsByClassName('removeItem');
-    console.log(removeCartItem);
 
     for (var i = 0; i < removeCartItemBtn.length; i++) {
         var btn = removeCartItemBtn[i];
@@ -35,11 +34,17 @@ function quantityChanged(event) {
 function addCartClicked(event) {
     var button = event.target;
     var shopItem = button.parentElement.parentElement;
-    var title = shopItem.getElementsByClassName('shop-item')[0].innerText;
+    var title = shopItem.getElementsByClassName('shop-item');
     var price = shopItem.getElementsByClassName('price')[0].innerText;
     
-    console.log(title);
+    
 };
+
+function addItemToCart(title, price) {
+    var cartRow = document.createElement('div');
+    var cartItems = document.getElementsByClassName('itemRow')[0];
+    cartItems.append(cartRow);
+}
 
 function removeCartItem(event) {
     var btnClicked = event.target;
