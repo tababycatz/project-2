@@ -13,6 +13,15 @@ var db = require("../models/index.js");
 //       res.json(data);
 //     });
 //   });
+
+module.exports = function(app) {
+  app.post("/api/orders", function (req, res) {
+    var cartItems = req.body;
+  })
+
+  cartItems.push(cartArray);
+};
+
 router.get("/api/main", function(req, res) {
   db.all( 
     function(result) {
@@ -56,5 +65,5 @@ router.get("/api/main", function(req, res) {
   });
 });
 
-  module.exports = router,
+  module.exports = router
 
