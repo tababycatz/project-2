@@ -1,15 +1,42 @@
 var connection = require("../config/connection");
 
-// Object Relational Mapper (ORM)
 
-// The ?? signs are for swapping out table or column names
-// The ? signs are for swapping out other values
-// These help avoid SQL injection
-// https://en.wikipedia.org/wiki/SQL_injection
+// ....................................................................................
+// need this code for print question marks
+function printQuestionMarks(num) {
+  var arr = [];
+
+  for (var i = 0; i < num; i++) {
+    arr.push("?");
+  }
+
+  return arr.toString();
+}
+
+function objToSql(ob) {
+  var arr = [];
+
+  for (var key in ob) {
+    var value = ob[key];
+    
+    if (Object.hasOwnProperty.call(ob, key)) {
+    
+      if (typeof value === "string" && value.indexOf(" ") >= 0) {
+        value = "'" + value + "'";
+      }
+     
+      arr.push(key + "=" + value);
+    }
+  }
+
+ return arr.toString();
+}
+
+// .................................................................................
 var orm = {
 
   all: function(tableInput, cb) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM " + tableInput + ";";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM " + tableInput + ";";
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
@@ -18,7 +45,7 @@ var orm = {
     });
   },
     select_food: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE  FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE  FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -28,7 +55,7 @@ var orm = {
     });
    },
    select_toys: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -38,7 +65,7 @@ var orm = {
     });
    },
    select_treats: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -48,7 +75,7 @@ var orm = {
     });
    },
    select_clothing: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -58,7 +85,7 @@ var orm = {
     });
    },
    select_Accessories: function(tableInput, colToSearch, valOfCol) {
-    var queryString = "SELECT ITEM_NAME,ITEM_NAME,ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
+    var queryString = "SELECT ITEM_DESCRIPTION,PRICE,ITEM_IMAGE FROM ?? WHERE ?? = ?";
     connection.query(queryString, [tableInput, colToSearch, valOfCol], function(err, result) {
       if (err) {
         throw err;
@@ -67,29 +94,32 @@ var orm = {
       console.log(result);
     });
    },
-  //  
-  
-  // selectAndOrder: function(whatToSelect, table, orderCol) {
-  //   var queryString = "SELECT ?? FROM ?? ORDER BY ?? DESC";
-  //   console.log(queryString);
-  //   connection.query(queryString, [whatToSelect, table, orderCol], function(err, result) {
-  //     if (err) throw err;
-  //     console.log(result);
-  //   });
-  // },
-  // findWhoHasMost: function(tableOneCol, tableTwoForeignKey, tableOne, tableTwo) {
-  //   var queryString =
-  //     "SELECT ??, COUNT(??) AS count FROM ?? LEFT JOIN ?? ON ??.??= ??.id GROUP BY ?? ORDER BY count DESC LIMIT 1";
+   
+  create: function(table, cols, vals, cb) {
+    var queryString = "INSERT INTO " + table;
 
-  //   connection.query(
-  //     queryString,
-  //     [tableOneCol, tableOneCol, tableOne, tableTwo, tableTwo, tableTwoForeignKey, tableOne, tableOneCol],
-  //     function(err, result) {
-  //       if (err) throw err;
-  //       console.log(result);
-  //     }
-    // );
-   }
-};
+    queryString += " (";
+    queryString += cols.toString();
+    queryString += ") ";
+    queryString += "VALUES (";
+    queryString += printQuestionMarks(vals.length);
+    queryString += ") ";
+
+    console.log(queryString);
+
+    connection.query(queryString, vals, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  },
+   
+
+  
+  
+} ;
+
 
 module.exports = orm;
