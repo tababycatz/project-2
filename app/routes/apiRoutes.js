@@ -4,16 +4,6 @@ var router = express.Router();
 
 var db = require("../models/index.js");
 
-var cartArray = require("../data/orders")
-// app.get("/api/products", function(req, res) {
-//     connection.query("SELECT * FROM products;", function(err, data) {
-//       if (err) {
-//         return res.status(500).end();
-//       }
-  
-//       res.json(data);
-//     });
-//   });
 
 module.exports = function(app) {
   app.get("/api/orders", function (req, res) {
@@ -31,19 +21,18 @@ app.post("/api/orders", function(req, res){
 
     for (let i = 0; i < cartArray.length; i++) {
 
-        if (friendDifference <= friendMatch.totalDifference) {
-            totalDifference = diff;
-            friendMatch.matchName = friendsData[i].name;
-            friendMatch.matchPic = friendsData[i].photo;
-            friendMatch.totalDifference = friendDifference;
-        }
+        // if (friendDifference <= friendMatch.totalDifference) {
+        //     totalDifference = diff;
+        //     friendMatch.matchName = friendsData[i].name;
+        //     friendMatch.matchPic = friendsData[i].photo;
+        //     friendMatch.totalDifference = friendDifference;
+        // }
     };
 
     cartArray.push(cartStuff);
     res.json(cartItems);
 })
 
-  cartItems.push(cartArray);
 };
 
 router.get("/api/main", function(req, res) {
