@@ -55,7 +55,8 @@ router.get("/api/accessories", function(req, res) {
     res.json({data: result});
   });
 });
-
+//****************you can add the whatever the name you call the arry**********************
+// ............................................................................................
 router.get("/api/orders", function(req, res) {
   res.json(arrayname);
 });
@@ -64,10 +65,10 @@ router.post("/api/orders", function(req, res) {
   cat.create([
     "ORDER_ID ", "MEMBER_ID", "ITEM_ID", "ITEM_NAME", " QUANTITY", "PRICE", "TOTAL" 
   ], [
-    req.body.ORDER_ID, req.body.MEMBER_ID, req.body.ITEM_ID, req.body.ITEM_NAME, req.body.QUANTITY, req.body.PRICE,req.body.
+    arrayname.ORDER_ID, arrayname.MEMBER_ID, arrayname.ITEM_ID, arrayname.ITEM_NAME, arrayname.QUANTITY, arrayname.PRICE,arrayname.TOTAL
   ], function(result) {
     // Send back the ID of the new quote
-    res.json({ id: result.insertId });
+    res.json({ data: result});
   });
 });
 
